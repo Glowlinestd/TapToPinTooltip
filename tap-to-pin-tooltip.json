@@ -1,0 +1,20 @@
+{
+  "id": "glowlinetaptooltip",
+  "name": "Tap to Pin Tooltip",
+  "author": [
+    "GlowlineStd"
+  ],
+  "description": "Pin card descriptions with a tap, dismiss on drag, and automatically deselect cards. Includes adjustable tooltip scale (1.00x-1.50x) and optional hiding of attached action buttons.",
+  "prefix": "atpt",
+  "main_file": "main.lua",
+  "priority": 100001,
+  "badge_colour": "487EA8",
+  "badge_text_colour": "FFFFFF",
+  "display_name": "Tap to Pin Tooltip",
+  "version": "1.1.1",
+  "dependencies": [
+    "Steamodded (>=1.*)"
+  ],
+  "icon_path": "tap-to-pin-icon.png",
+  "icon_width": 34
+}
