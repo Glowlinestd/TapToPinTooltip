@@ -1,82 +1,107 @@
 # Tap to Pin Tooltip
 
-A configurable Balatro mod that makes card descriptions easier to inspect using touch controls.
+![Tap to Pin Tooltip](assets/2x/tap-to-pin-icon.png)
 
-**Creator:** GlowlineStd  
-**Version:** 1.1.1  
-**Requirement:** [Steamodded](https://github.com/Steamodded/smods)
+A quality-of-life mod for **Balatro** that makes card inspection more intuitive with persistent tooltips, customizable scaling, and optional interface cleanup.
+
+Designed primarily for touch controls, while preserving the game's original mouse interactions.
+
+**Author:** GlowlineStd  
+**Requires:** [Steamodded](https://github.com/Steamodded/smods)
 
 ## Features
 
-![Tap to Pin Tooltip icon](assets/2x/tap-to-pin-icon.png)
+### Persistent Tooltips
 
+- **Tap to pin:** Tap a Joker, consumable, or other eligible card to keep its tooltip visible without holding it.
+- **Tap to dismiss:** Tap the same card, another card, or an empty area to close the current tooltip.
+- **Drag to dismiss:** Tooltips automatically disappear when a card is dragged and remain hidden throughout the gesture.
+- **Automatic deselection:** Cards return to their normal position when their tooltip is dismissed or when released after dragging.
+- **Hand card behavior:** Playing cards in your hand retain their original press-and-hold inspection behavior.
 
-- **Tap to pin:** Tap a Joker, consumable, or another eligible card to keep its tooltip visible.
-- **Tap to dismiss:** Tap the same card, a different card, or an empty area to close the previous tooltip. Dismissed cards are deselected automatically.
-- **Drag to dismiss:** Tooltips disappear as soon as a card is dragged a short distance, and stay hidden for that drag.
-- **Clean release:** Dropping a dragged card without taking an action returns it to its unselected position.
-- **Hand cards:** Playing cards in your hand retain their regular press-and-hold inspection behavior.
-- **Tooltip scale:** Choose a size from **1.00× to 1.50×** in steps of **0.05×**.
-- **Hide attached card buttons:** Optionally hide the action buttons attached directly to cards across shop cards, Jokers, consumables, vouchers, boosters, and other card types. Prices and card descriptions remain visible.
+### Customization
+
+- **Tooltip scaling:** Adjust tooltip size from 1.00× to 1.50× in increments of 0.05×.
+- **Clean interface:** Optionally hide attached card action buttons without modifying the underlying game actions.
+- **In-game settings:** Configure everything directly through the Steamodded mod menu.
+- **Localization:** Automatic English and Spanish localization, including Latin American Spanish.
 
 ## Installation
 
-1. Install Steamodded in your copy of Balatro.
-2. Download the release ZIP and extract it.
-3. Copy the **`TapToPinTooltip`** folder into your Balatro **`Mods`** directory.
-4. Launch Balatro. Find **Tap to Pin Tooltip** in the Steamodded mod list.
+1. Install [Steamodded](https://github.com/Steamodded/smods).
+2. Download the latest `TapToPinTooltip` ZIP from the **Releases** section of this repository.
+3. Extract the archive into your Balatro `Mods` directory.
+4. Launch Balatro and open the **Mods** menu to configure Tap to Pin Tooltip.
 
-The directory should look like this:
+Your installation should look like this:
 
 ```text
 Mods/
 └── TapToPinTooltip/
-    ├── tap-to-pin-tooltip.json
     ├── main.lua
     ├── config.lua
     ├── assets/
-    │   ├── 1x/tap-to-pin-icon.png
-    │   └── 2x/tap-to-pin-icon.png
     ├── localization/
-    │   ├── default.lua
-    │   ├── en-us.lua
-    │   ├── es_ES.lua
-    │   └── es_419.lua
-    ├── README.md
-    └── CHANGELOG.md
+    └── ...
 ```
 
 ## Configuration
 
-In Balatro, open **Mods → Tap to Pin Tooltip → Config**. The configuration panel contains the tooltip scale selector and the card-button visibility toggle.
-
-**Languages:** The configuration automatically uses Spanish when Balatro is set to Spanish (Spain or Latin America) and English when set to English. Other game languages fall back to English. The Mods menu also shows a localized mod description.
+Navigate to **Mods → Tap to Pin Tooltip → Config**.
 
 | Setting | Default | Description |
-| --- | --- | --- |
-| Tooltip scale | 1.00× | Changes the size of tooltip text and panels (1.00×–1.50×, 0.05× increments). |
-| Hide attached card buttons | Off | Hides individual action buttons displayed next to cards. |
+|---------|---------|-------------|
+| Tooltip Scale | 1.00× | Adjusts tooltip size from 1.00× to 1.50×. |
+| Hide Attached Card Buttons | Off | Hides individual action buttons attached to cards. |
 
-**Important:** Hiding attached action buttons is optional and disabled by default so normal card actions remain accessible. Turn it on only if you already have a convenient way to perform those actions. This option hides UI controls; it does not replace buying, selling, or using cards with new gestures.
+Settings are automatically localized based on your selected game language. Unsupported languages fall back to English.
 
-## Mod icon
+> [!IMPORTANT]
+> Hiding attached card buttons does not introduce alternative controls for buying, selling, or using cards. Make sure you have another way to perform these actions before enabling this option.
 
-The mod ships with a custom **34×34** icon for 1× scaling and a **68×68** icon for 2× scaling, displayed in the Steamodded Mods menu.
+## Compatibility
 
-## Input behavior
+### Sticky Fingers
 
-Tap-to-pin functionality is enabled when Balatro reports touch input. Other input methods retain their usual hover and click behavior. Tooltip scaling and the button-visibility option remain configurable in the mod menu.
+Tap to Pin Tooltip pairs particularly well with [Sticky Fingers](https://github.com/eramdam/sticky-fingers).
 
-## Updating or uninstalling
+While Sticky Fingers provides drag-based interactions for buying, selling, and using cards, Tap to Pin Tooltip enhances card inspection and allows attached action buttons to be hidden for a cleaner interface.
 
-- To update, close Balatro and replace the existing `TapToPinTooltip` folder with the new release folder.
-- If upgrading from a pre-release build, revisit the settings after starting Balatro, as the public release uses a new mod identifier.
-- To uninstall, close Balatro and delete the `TapToPinTooltip` folder.
+**Recommended setup:**
+- Enable **Hide Attached Card Buttons** in Tap to Pin Tooltip.
+- Use Sticky Fingers' drag-based controls to interact with cards.
+- Tap cards to inspect their descriptions without holding them.
 
-## Reporting bugs
+Both mods complement each other without requiring any additional configuration.
 
-Include your Balatro version, Steamodded version, the action you performed, and the behavior you observed. If the issue is visual, include a screenshot if possible.
+**Sticky Fingers is entirely optional.** Tap to Pin Tooltip works independently and only requires Steamodded.
+
+## Input Behavior
+
+Tap-to-pin functionality activates when Balatro detects touch input.
+
+Standard mouse interactions retain their original hover and click behavior. Tooltip scaling and button visibility settings remain available regardless of input method.
+
+## Updating
+
+1. Close Balatro.
+2. Download the latest release.
+3. Replace the existing `TapToPinTooltip` folder with the updated version.
+4. Launch the game.
+
+To uninstall, simply remove the `TapToPinTooltip` folder from your `Mods` directory.
+
+## Feedback and Bug Reports
+
+Found a bug or have a suggestion? Open an issue in this repository.
+
+When reporting a problem, please include:
+- Balatro version
+- Steamodded version
+- Steps to reproduce the issue
+- Expected and actual behavior
+- Screenshots, if applicable
 
 ---
 
-Created by **GlowlineStd**.
+Developed and maintained by **GlowlineStd**.
